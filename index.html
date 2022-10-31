@@ -5,38 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <title>Calculadora</title>
 </head>
 <body>
     <h1>Calculadora</h1>
     <div class="calculadora">
         <section class="pantalla-resultados">
-
-
-
+            <div class="operaciones-acumuladas"></div>
+            <div class="digital"></div>
         </section>
 
         <section class="container-teclas">
-            <div class="teclas tecla-">( )</div>
-            <div class="teclas tecla-">Reiniciar</div>
-            <div class="teclas tecla-">Borrar</div>
-            <div class="teclas tecla-suma">+</div>
-            <div class="teclas tecla-1">1</div>
-            <div class="teclas tecla-2">2</div>
-            <div class="teclas tecla-3">3</div>
-            <div class="teclas tecla-resta">-</div>
-            <div class="teclas tecla-4">4</div>
-            <div class="teclas tecla-5">5</div>
-            <div class="teclas tecla-6">6</div>
-            <div class="teclas tecla-multiplicacion">*</div>
-            <div class="teclas tecla-7">7</div>
-            <div class="teclas tecla-8">8</div>
-            <div class="teclas tecla-9">9</div>
-            <div class="teclas tecla-division">/</div>
+            <div class="teclas tecla-parentesis">( )</div>
+            <div class="teclas tecla-limpiar">Reiniciar</div>
+            <div class="teclas tecla-borrar">Borrar</div>
+            <div class="teclas teclas-operaciones" id="tecla-sumar">+</div>
+            <div class="teclas teclas-numeros" id="tecla-1">1</div>
+            <div class="teclas teclas-numeros" id="tecla-2">2</div>
+            <div class="teclas teclas-numeros" id="tecla-3">3</div>
+            <div class="teclas teclas-operaciones" id="tecla-restar">-</div>
+            <div class="teclas teclas-numeros" id="tecla-4">4</div>
+            <div class="teclas teclas-numeros" id="tecla-5">5</div>
+            <div class="teclas teclas-numeros" id="tecla-6">6</div>
+            <div class="teclas teclas-operaciones" id="tecla-multiplicar">*</div>
+            <div class="teclas teclas-numeros" id="tecla-7">7</div>
+            <div class="teclas teclas-numeros" id="tecla-8">8</div>
+            <div class="teclas teclas-numeros" id="tecla-9">9</div>
+            <div class="teclas teclas-operaciones" id="tecla-dividir">/</div>
             <div class="teclas tecla-"></div>
-            <div class="teclas tecla-0">0</div>
-            <div class="teclas tecla-">.</div>
-            <div class="teclas tecla-resultado">=</div>
+            <div class="teclas teclas-numeros" id="tecla-0">0</div>
+            <div class="teclas tecla-decimal">.</div>
+            <div class="teclas teclas-operaciones">=</div>
 
         </section>
     </div>
