@@ -31,7 +31,11 @@ limpiarCalc.onclick = ()=>{
 btnResultado.onclick = ()=>{
     let operacionDiv = $('.operaciones-acumuladas')
     let operaciones = operacionDiv.innerText
-    eval(operaciones)
+    try {
+        eval(operaciones)
+    } catch (error) {
+        operacionDiv.innerText = 'SyntaxError'
+    }
     let digital = $('.digital')
     digital.innerText = ` = ${eval(operaciones)}`
 }
