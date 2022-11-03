@@ -5,7 +5,6 @@ let arrayOperaciones = Array.from(document.querySelectorAll('.teclas-operaciones
 let limpiarCalc = $('#tecla-borrar')
 let btnResultado = $('#tecla-resultado')
 let btnDecimal = $('.tecla-decimal')
-console.log(arrayOperaciones)
 let suma = arrayOperaciones[5]
 let restar = arrayOperaciones[4]
 let multiplicar = arrayOperaciones[3]
@@ -86,7 +85,28 @@ function agregarElemento(elemento) {
 }
 
 
+document.addEventListener('keydown', (e)=>{
+    let numeros = ['0','1','2','3','4','5','6','7','8','9']
+    let operaciones = ['+','-','*','/','(',')','.',]
+    console.log(e.key)
+    let isNumber = numeros.some((a)=>{return a == e.key})
+    let isOperation = operaciones.some((a)=>{return a == e.key})
 
+    if (isNumber || isOperation) {
+        agregarElemento(e.key)
+    }
+    
+    switch (e.key) {
+        case 'Enter':
+            btnResultado.onclick()
+            break;
+        case 'Backspace':
+            borrar.onclick()
+            break;
+        default:
+            break;
+    }
+})
 
 
 
