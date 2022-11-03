@@ -17,8 +17,7 @@ let abierto = true
 
 for (const iterator of arrayNumeros) {
     iterator.onclick=()=>{
-        let pantalla = $('.operaciones-acumuladas')
-        pantalla.innerText += iterator.innerText
+        agregarElemento(iterator.innerText)
     }
 }
 
@@ -38,21 +37,17 @@ btnResultado.onclick = ()=>{
 }
 
 suma.onclick = ()=>{
-    let operaciones = $('.operaciones-acumuladas')
-    operaciones.innerText += `+`
+    agregarElemento('+')
 }
 restar.onclick = ()=>{
-    let operaciones = $('.operaciones-acumuladas')
-    operaciones.innerText += `-`
+    agregarElemento('-')
 }
 dividir.onclick = ()=>{
-    let operaciones = $('.operaciones-acumuladas')
-    operaciones.innerText += `/`
+    agregarElemento('/')
 }
 
 multiplicar.onclick = ()=>{
-    let operaciones = $('.operaciones-acumuladas')
-    operaciones.innerText += `*`
+    agregarElemento('*')
 }
 
 borrar.onclick = ()=>{
@@ -77,13 +72,14 @@ parentesis.onclick = ()=>{
 }
 
 btnDecimal.onclick = ()=>{
-    let operaciones = $('.operaciones-acumuladas')
-    operaciones.innerText += '.' 
+    agregarElemento('.')
 }
 
-console.log(eval(1.2+2))
 
-
+function agregarElemento(elemento) {
+    let operaciones = $('.operaciones-acumuladas')
+    operaciones.innerText += elemento
+}
 
 
 
