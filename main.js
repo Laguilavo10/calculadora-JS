@@ -88,7 +88,6 @@ function agregarElemento(elemento) {
 document.addEventListener('keydown', (e)=>{
     let numeros = ['0','1','2','3','4','5','6','7','8','9']
     let operaciones = ['+','-','*','/','(',')','.',]
-    console.log(e.key)
     let isNumber = numeros.some((a)=>{return a == e.key})
     let isOperation = operaciones.some((a)=>{return a == e.key})
 
