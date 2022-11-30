@@ -10,14 +10,28 @@
 body{
     font-family: 'Rubik', sans-serif;
     background-color: #191a1f;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* align-content: center; */
+    gap: 30px;
+    margin: 10px 0 0 0;
 }
 
+
+/* h1{
+    justify-self: start;
+    align-self: start;
+} */
 .calculadora{
 
-    width: 450px;
+    max-width: 450px;
+    width: 90%;
     border: 1px solid black;
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
